@@ -14,6 +14,7 @@ class SessionsController extends Controller
     }
 
 
+    //Authentification de l'user
     public function authenticate(Request $request)
     {
         $credentials = $request->only('email', 'password');
@@ -25,6 +26,7 @@ class SessionsController extends Controller
         return redirect('/login');
     }
 
+    //Deconnexion de l'user
     public function logout()
     {
         Auth::logout();

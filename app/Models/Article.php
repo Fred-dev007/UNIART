@@ -11,7 +11,8 @@ class Article extends Model
         "image",
         "content",
         'user_id',
-        "file_path"
+        "file_path",
+        "description"
     ];
 
     // Un article n'a qu'un auteur

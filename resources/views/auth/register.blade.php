@@ -12,7 +12,7 @@
 <body>
     <div>
         <div class="absolute top-12 left-16 p-10 text-5xl text-blue-400">
-            <h1>UNIART</h1>
+            <h1 class="text-4xl text-blue-400 font-bold">UNIART</h1>
 
         </div>
 

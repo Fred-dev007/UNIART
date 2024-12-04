@@ -3,7 +3,8 @@
 @section('content')
 <div class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg">
     <h1 class="text-3xl font-bold mt-5 mb-4">Titre: {{$article->title}}</h1>
-    <p class="text-lg mb-6">Description: {{$article->content}}</p>
+    <p class="text-lg mb-6">Description: {{$article->description}}</p>
+    <p class="text-lg mb-6">contenue: {!!$article->content!!}</p>
     <div class="flex gap-4 justify-between mb-6">
         <div class="flex gap-3 ">
             <a class="bg-blue-500 text-white border rounded p-2 hover:bg-blue-600" href="/edit/{{ $article->id }}">Éditer l'article</a>

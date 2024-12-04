@@ -15,12 +15,16 @@
             ])
     
             @include('partials.article-form', [
-                'name' => 'content',
+                'name' => 'description',
                 'type' => 'text',
                 'label' => "Description de l'article",
                 'class' => 'border w-full p-2 rounded',
-                'value'=> $article->content
+                'value'=> $article->description
             ])
+
+            @if ($article->content)
+            <textarea id="myeditorinstance"  class ='border w-full p-2 rounded' name ='content'>{!!$article->content!!}</textarea>
+            @endif
     
             <div class="w-full">
                 @include('partials.article-form', [
@@ -31,7 +35,7 @@
                     'value'=> $article->image 
                 ])
             </div>
-    
+            @if ($article->file_path)  
             <div class="w-full">
                 @include('partials.article-form', [
                     'name' => 'file_path',
@@ -41,6 +45,7 @@
                     'value'=> "{{ 'storage/'.$article->file_path }}"
                 ])
             </div>
+            @endif
         </div>
     
         <button type="submit" class="mt-4 p-2 text-white bg-blue-600 rounded hover:bg-blue-700">Modifier</button>

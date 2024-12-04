@@ -9,6 +9,6 @@
     </div>
     <div class="p-4">
         <div class="text-lg font-medium text-gray-800 mb-2">{{ $article->title }}</div>
-        <p class="text-gray-500 text-sm">{{ $article->content }}</p>
+        <p class="text-gray-500 text-sm">{!! $article->description !!}</p>
     </div>
 </div>
